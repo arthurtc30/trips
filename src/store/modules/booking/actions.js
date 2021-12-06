@@ -12,3 +12,11 @@ export function deleteBooking(id) {
     id,
   };
 }
+
+export function updateBookingAmount(id, amount) {
+  return {
+    type: 'UPDATE_BOOKING',
+    id,
+    amount,
+  }
+}

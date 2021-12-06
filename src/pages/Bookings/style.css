@@ -30,3 +30,17 @@ footer button {
   margin-top: 10px;
   font-weight: bold;
 }
+
+.bookings #amount {
+  display: flex;
+  align-items: center;
+}
+
+.bookings #amount input {
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  color: #242424;
+  padding: 5px;
+  width: 40px
+}

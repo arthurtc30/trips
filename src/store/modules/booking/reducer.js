@@ -24,6 +24,19 @@ export default function booking(state = [], action) {
           draft.splice(tripIndex, 1);
         }
       });
+    case 'UPDATE_BOOKING': {
+      if (action.amount <= 0) {
+        return state;
+      }
+
+      return produce(state, draft => {
+        const tripIndex = draft.findIndex(trip => trip.id === action.id);
+
+        if (tripIndex >= 0) {
+          draft[tripIndex].amount = Number(action.amount);
+        }
+      });
+    }
     default:
       return state;
   }
