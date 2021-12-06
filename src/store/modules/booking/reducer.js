@@ -2,7 +2,7 @@ import produce from 'immer';
 
 export default function booking(state = [], action) {
   switch (action.type) {
-    case 'ADD_BOOKING':
+    case 'ADD_BOOKING_SUCCESS':
       return produce(state, draft => {
         const tripIndex = draft.findIndex(trip => trip.id === action.trip.id);
 

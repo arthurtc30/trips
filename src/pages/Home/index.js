@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import api from '../../services/api';
 import { MdFlightTakeoff } from 'react-icons/md';
 import './style.css';
-import { addBooking } from '../../store/modules/booking/actions';
+import { addBookingRequest } from '../../store/modules/booking/actions';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -19,8 +19,8 @@ export default function Home() {
     loadApi();
   }, []);
 
-  function handleAdd(trip) {
-    dispatch(addBooking(trip));
+  function handleAdd(id) {
+    dispatch(addBookingRequest(id));
   }
 
   if (trips.length === 0) {
@@ -40,7 +40,7 @@ export default function Home() {
             <strong>{trip.title}</strong>
             <span>Status: {trip.status ? 'Available' : 'Not available'}</span>
 
-            <button type="button" onClick={() => handleAdd(trip)}>
+            <button type="button" onClick={() => handleAdd(trip.id)}>
               <div>
                 <MdFlightTakeoff size={16} color="#FFF" />
               </div>

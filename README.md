@@ -7,3 +7,4 @@
 4. react-icons
 5. redux react-redux
 6. immer
+7. redux-saga

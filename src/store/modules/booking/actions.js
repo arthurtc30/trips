@@ -1,7 +1,14 @@
 
-export function addBooking(trip) {
+export function addBookingRequest(id) {
   return {
-    type: 'ADD_BOOKING',
+    type: 'ADD_BOOKING_REQUEST',
+    id,
+  };
+}
+
+export function addBookingSuccess(trip) {
+  return {
+    type: 'ADD_BOOKING_SUCCESS',
     trip,
   };
 }
