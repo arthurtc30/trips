@@ -7,8 +7,17 @@ function* addToBooking({ id }) {
     state => state.booking.find(trip => trip.id === id),
   );
 
+  const myStock = yield call(api.get, `/stock/${id}`);
+  const stockAmount = myStock.data.amount;
+  const currentStock = tripExists ? tripExists.amount : 0;
+  const amount = currentStock + 1;
+
+  if (amount > stockAmount) {
+    alert('XD');
+    return;
+  }
+
   if (tripExists) {
-    const amount = tripExists.amount + 1;
 
     yield put(updateBookingAmount(id, amount));
   } else {
