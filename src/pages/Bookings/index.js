@@ -1,10 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { MdDelete } from 'react-icons/md';
 import './style.css';
 
 export default function Reservas() {
+  const dispatch = useDispatch();
   const bookings = useSelector(state => state.booking);
+
+  function handleDelete(id) {
+    dispatch({
+      type: 'DELETE_BOOKING',
+      id,
+    })
+  }
 
   return (
     <div>
@@ -15,7 +23,7 @@ export default function Reservas() {
           <img src={booking.image} alt={booking.title} />
           <strong>{booking.title}</strong>
           <span>Quantidade: {booking.amount}</span>
-          <button type="button" onClick={() => {}}>
+          <button type="button" onClick={() => handleDelete(booking.id)}>
             <MdDelete size={20} color="#191919" />
           </button>
         </div>

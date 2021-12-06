@@ -13,10 +13,18 @@ export default function booking(state = [], action) {
             ...action.trip,
             amount: 1,
           });
-  }
+        }
 
-});
+      });
+    case 'DELETE_BOOKING':
+      return produce(state, draft => {
+        const tripIndex = draft.findIndex(trip => trip.id === action.id);
+
+        if (tripIndex >= 0) {
+          draft.splice(tripIndex, 1);
+        }
+      });
     default:
-return state;
+      return state;
   }
 }
