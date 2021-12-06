@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import api from '../../services/api';
 import { MdFlightTakeoff } from 'react-icons/md';
 import './style.css';
+import { addBooking } from '../../store/modules/booking/actions';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -19,10 +20,7 @@ export default function Home() {
   }, []);
 
   function handleAdd(trip) {
-    dispatch({
-      type: 'ADD_BOOKING',
-      trip,
-    });
+    dispatch(addBooking(trip));
   }
 
   if (trips.length === 0) {

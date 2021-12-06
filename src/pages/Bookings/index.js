@@ -2,16 +2,14 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { MdDelete } from 'react-icons/md';
 import './style.css';
+import { deleteBooking } from '../../store/modules/booking/actions';
 
 export default function Reservas() {
   const dispatch = useDispatch();
   const bookings = useSelector(state => state.booking);
 
   function handleDelete(id) {
-    dispatch({
-      type: 'DELETE_BOOKING',
-      id,
-    })
+    dispatch(deleteBooking(id));
   }
 
   return (
