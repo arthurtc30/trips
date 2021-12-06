@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { MdAddCircle, MdDelete, MdRemoveCircle } from 'react-icons/md';
 import './style.css';
-import { deleteBooking, updateBookingAmount } from '../../store/modules/booking/actions';
+import { deleteBooking, updateAmountRequest } from '../../store/modules/booking/actions';
 
 export default function Reservas() {
   const dispatch = useDispatch();
@@ -13,11 +13,11 @@ export default function Reservas() {
   }
 
   function decrementAmount(booking) {
-    dispatch(updateBookingAmount(booking.id, booking.amount - 1));
+    dispatch(updateAmountRequest(booking.id, booking.amount - 1));
   }
 
   function incrementAmount(booking) {
-    dispatch(updateBookingAmount(booking.id, booking.amount + 1));
+    dispatch(updateAmountRequest(booking.id, booking.amount + 1));
   }
 
   return (

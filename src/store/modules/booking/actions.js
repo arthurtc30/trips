@@ -20,9 +20,17 @@ export function deleteBooking(id) {
   };
 }
 
-export function updateBookingAmount(id, amount) {
+export function updateAmountRequest(id, amount) {
   return {
-    type: 'UPDATE_BOOKING',
+    type: 'UPDATE_BOOKING_REQUEST',
+    id,
+    amount,
+  }
+}
+
+export function updateAmountSuccess(id, amount) {
+  return {
+    type: 'UPDATE_BOOKING_SUCCESS',
     id,
     amount,
   }

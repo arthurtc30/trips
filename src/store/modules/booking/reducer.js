@@ -14,11 +14,7 @@ export default function booking(state = [], action) {
           draft.splice(tripIndex, 1);
         }
       });
-    case 'UPDATE_BOOKING': {
-      if (action.amount <= 0) {
-        return state;
-      }
-
+    case 'UPDATE_BOOKING_SUCCESS': {
       return produce(state, draft => {
         const tripIndex = draft.findIndex(trip => trip.id === action.id);
 
