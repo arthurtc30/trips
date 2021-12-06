@@ -14,7 +14,7 @@ export default function Reservas() {
         <div key={booking.id} className="bookings">
           <img src={booking.image} alt={booking.title} />
           <strong>{booking.title}</strong>
-          <span>Quantidade: 2</span>
+          <span>Quantidade: {booking.amount}</span>
           <button type="button" onClick={() => {}}>
             <MdDelete size={20} color="#191919" />
           </button>
