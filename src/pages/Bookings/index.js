@@ -7,7 +7,7 @@ export default function Reservas() {
     <div>
       <h1 className="title">You have requested (1) bookings</h1>
 
-      <div className="reservas">
+      <div className="bookings">
         <img src="" alt="" />
         <strong>Trip</strong>
         <button type="button" onClick={() => {}}>

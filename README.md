@@ -5,4 +5,5 @@
 2. json-server
 3. axios
 4. react-icons
+5. redux react-redux
 

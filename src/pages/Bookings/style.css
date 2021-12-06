@@ -2,7 +2,7 @@
   color: #FFF;
 }
 
-.reservas {
+.bookings {
   padding: 20px;
   margin-bottom: 10px;
   background: #FFF;
@@ -12,11 +12,11 @@
   align-items: center;
 }
 
-.reservas img {
+.bookings img {
   height: 100px;
 }
 
-.reservas button {
+.bookings button {
   border: 0;
   background: #FFF;
 }

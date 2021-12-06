@@ -10,7 +10,7 @@ export default function Header() {
         <img className="logo" src={logo} alt="Trips project logo" />
       </Link>
 
-      <Link to="/reservas" className="reserva">
+      <Link to="/bookings" className="booking">
         <div>
           <strong>My bookings</strong>
           <span>0 bookings</span>

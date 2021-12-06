@@ -11,23 +11,23 @@
   max-height: 110px;
 }
 
-.reserva {
+.booking {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-.reserva div {
+.booking div {
   text-align: right;
   margin-right: 10px;
 }
 
-.reserva strong {
+.booking strong {
   color: #FFF;
   display: block;
 }
 
-.reserva span {
+.booking span {
   color: #DDD;
   font-size: 15px;
 }
