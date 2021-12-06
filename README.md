@@ -8,3 +8,4 @@
 5. redux react-redux
 6. immer
 7. redux-saga
+8. history
